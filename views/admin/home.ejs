@@ -1,0 +1,39 @@
+<%- include('../layouts/header.ejs') %>
+
+<div class="container mt-5">
+  <div class="d-flex justify-content-center">
+    <div class="card shadow-sm rounded" style="width: 100%; max-width: 600px">
+      <div
+        class="card-header text-center bg-dark text-white rounded-top py-4"
+      >
+        <h2 class="mb-0">Admin Profile</h2>
+      </div>
+      <div class="card-body p-4">
+        <div class="mb-4">
+          <h5 class="font-weight-bold text-secondary mb-2">
+            <i class="bi bi-person-circle"></i> User Name:
+          </h5>
+          <p class="ml-4 text-dark h5"><%= admin.name %></p>
+        </div>
+        <div class="mb-4">
+          <h5 class="font-weight-bold text-secondary mb-2">
+            <i class="bi bi-envelope-fill"></i> Registered Email Id:
+          </h5>
+          <p class="ml-4 text-dark h5"><%= admin.email %></p>
+        </div>
+      </div>
+      <div class="card-footer text-center bg-light rounded-bottom py-3">
+        <a href="/admin/dashboard" class="btn btn-info btn-lg"
+          ><i class="bi bi-person-workspace"></i> Dashboard</a
+        >
+      </div>
+      <div class="card-footer text-center bg-light rounded-bottom py-3">
+        <a href="/admin/logout" class="btn btn-danger btn-lg"
+          ><i class="bi bi-box-arrow-right"></i> Logout</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('../layouts/footer.ejs') %>
